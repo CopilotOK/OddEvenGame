@@ -1,10 +1,14 @@
 import random
 import time
+import pyautogui
+from tkinter import *
+from Colours import Colors
+from fancystart import startgame
 
-summaryopen = open("summaryfile.txt", 'a')
+startgame()
+
 
 def computerbowl():
-    specify = summaryopen.write("player is batting \n")
     player_runs = 0
     balls = 0
     playerrunchoice = int
@@ -21,7 +25,6 @@ def computerbowl():
         balls = balls + 1
         print(str(player_runs)+" runs")
         print(str(balls)+" balls")
-        line3 = summaryopen.write(f"runs [{player_runs}] balls[{balls}] \n")
         time.sleep(2)
 
     print("You are out!")
@@ -30,7 +33,7 @@ def computerbowl():
     print("Getting things ready")
     time.sleep(5)
 
-    specify2 = summaryopen.write("computer is batting \n") 
+
     computer_runs = 0
     balls = 0
     playerrunchoice = int
@@ -47,12 +50,11 @@ def computerbowl():
         balls = balls + 1
         print(str(computer_runs)+" runs")
         print(str(balls)+" balls")
-        line4 = summaryopen.write(f"runs [{computer_runs} balls [{balls}] \n#2")
         if computer_runs > player_runs:
             break
 
         time.sleep(2)
-    summaryopen.close()
+    
 
     if player_runs > computer_runs:
         print("You won")
@@ -66,7 +68,7 @@ def computerbowl():
 
 
 def computerbat():
-    specify = summaryopen.write("computer is batting \n")
+    
     computer_runs = 0
     balls = 0
     playerrunchoice = int
@@ -84,7 +86,7 @@ def computerbat():
         balls = balls + 1
         print(str(computer_runs)+" runs")
         print(str(balls)+" balls")
-        line3 = summaryopen.write(f"runs [{computer_runs}] balls [{balls}] \n ")
+        
         time.sleep(2)
 
     print("Computer is out!")
@@ -92,7 +94,7 @@ def computerbat():
     print("it's time for your batting")
     print("getting things ready")
 
-    specify2 = summaryopen.write("player is batting \n")
+    
     player_runs = 0
     balls = 0
     playerrunchoice = int
@@ -109,11 +111,11 @@ def computerbat():
         balls = balls + 1
         print(str(player_runs)+" runs")
         print(str(balls)+" balls")
-        line4 = summaryopen.write(f"runs [{player_runs}] balls [{balls}] \n")
+        
         if player_runs > computer_runs:
             break 
         time.sleep(2)
-    summaryopen.close()
+    
 
     if player_runs > computer_runs:
         print("You Win!")
@@ -127,7 +129,7 @@ def computerbat():
 
 
 def playerbowl():
-    specify = summaryopen.write("computer is batting \n")
+    
     computer_runs = 0
     balls = 0
     playerrunchoice = int
@@ -145,7 +147,7 @@ def playerbowl():
         balls = balls + 1
         print(str(computer_runs)+" runs")
         print(str(balls)+" balls")
-        line3 = summaryopen.write(f"runs [{computer_runs}] balls [{balls}] \n ")
+        
         time.sleep(2)
 
     print("Computer is out!")
@@ -153,7 +155,7 @@ def playerbowl():
     print("it's time for your batting")
     print("getting things ready")
 
-    specify2 = summaryopen.write("player is batting \n")
+    
     player_runs = 0
     balls = 0
     playerrunchoice = int
@@ -170,11 +172,11 @@ def playerbowl():
         balls = balls + 1
         print(str(player_runs)+" runs")
         print(str(balls)+" balls")
-        line4 = summaryopen.write(f"runs [{player_runs}] balls [{balls}] \n")
+        
         if player_runs > computer_runs:
             break 
         time.sleep(2)
-    summaryopen.close()
+    
 
     if player_runs > computer_runs:
         print("You Win!")
@@ -187,7 +189,7 @@ def playerbowl():
 
 
 def playerbat():
-    specify = summaryopen.write("player is batting \n")
+    
     player_runs = 0
     balls = 0
     playerrunchoice = int
@@ -204,7 +206,7 @@ def playerbat():
         balls = balls + 1
         print(str(player_runs)+" runs")
         print(str(balls)+" balls")
-        line3 = summaryopen.write(f"runs [{player_runs}] balls[{balls}] \n")
+        
         time.sleep(2)
 
     print("You are out!")
@@ -213,7 +215,7 @@ def playerbat():
     print("Getting things ready")
     time.sleep(5)
  
-    specify2 = summaryopen.write("computer is batting \n")
+    
     computer_runs = 0
     balls = 0
     playerrunchoice = int
@@ -230,11 +232,11 @@ def playerbat():
         balls = balls + 1
         print(str(computer_runs)+" runs")
         print(str(balls)+" balls")
-        line4 = summaryopen.write(f"runs [{computer_runs} balls [{balls}] \n")
+       
         if computer_runs > player_runs:
             break 
         time.sleep(2)
-    summaryopen.close()
+    
 
     if player_runs > computer_runs:
         print("You won")
@@ -248,7 +250,7 @@ def playerbat():
 
 print("WELCOME TO Cricket 2.0 \n -Added summaries \n -Bug fixes")
 matchname = input("Type a word or scentence that you want to use as the title for this match: ")
-line2 = summaryopen.write(f"     match: {matchname} \n \n")
+
 
 runchoices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 rulesorstart = ["rules", "start"]
